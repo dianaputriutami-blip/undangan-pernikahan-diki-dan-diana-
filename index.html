@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Diana & Diki</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Playfair Display', serif;
+  background:#f8f4ee;
+  color:#2c2c2c;
+}
+
+/* COVER */
+.cover{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(#f8f4ee,#efe6d8);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:999;
+}
+.cover h1{
+  font-family:'Great Vibes', cursive;
+  font-size:42px;
+  color:#7a5c3c;
+}
+.cover .nama{
+  font-size:22px;
+  margin:10px 0;
+}
+.cover button{
+  margin-top:30px;
+  background:#7a5c3c;
+  color:#fff;
+  border:none;
+  padding:12px 34px;
+  border-radius:30px;
+  font-size:16px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:420px;
+  margin:auto;
+  background:#fff;
+  padding:20px;
+  text-align:center;
+  animation:fade 1.5s;
+}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+.section{
+  background:#f2eadf;
+  margin:30px 0;
+  padding:20px;
+  border-radius:20px;
+  animation:fadeUp 1.3s;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* DEKOR */
+.leaf{
+  position:absolute;
+  font-size:40px;
+  opacity:0.3;
+}
+.leaf.tl{top:10px;left:10px}
+.leaf.tr{top:10px;right:10px}
+.leaf.bl{bottom:10px;left:10px}
+.leaf.br{bottom:10px;right:10px}
+
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+.time{
+  background:#7a5c3c;
+  color:#fff;
+  padding:10px;
+  border-radius:12px;
+  width:70px;
+}
+.time span{font-size:22px;font-weight:bold}
+
+/* FORM */
+input,textarea,select{
+  width:90%;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin:6px 0;
+}
+button.send{
+  background:#7a5c3c;
+  color:#fff;
+  border:none;
+  padding:10px 26px;
+  border-radius:25px;
+  margin-top:10px;
+}
+
+iframe{
+  width:100%;
+  height:220px;
+  border:0;
+  border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio id="musik" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <h1>Undangan Pernikahan</h1>
+  <div class="nama">Diana Putri Utami<br>&<br>Diki Pratama</div>
+  <button onclick="buka()">💌 Buka Undangan</button>
+</div>
+
+<div class="container">
+
+<div class="leaf tl">🌿</div>
+<div class="leaf tr">🍃</div>
+<div class="leaf bl">🍂</div>
+<div class="leaf br">🌿</div>
+
+<!-- ARAB -->
+<div class="section">
+<p style="font-size:20px">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+</p>
+<p>Dengan memohon rahmat dan ridho Allah SWT</p>
+</div>
+
+<h1 style="font-family:'Great Vibes',cursive;font-size:40px;color:#7a5c3c">
+Diana & Diki
+</h1>
+
+<!-- COUNTDOWN -->
+<div class="countdown">
+  <div class="time"><span id="d">0</span><br>Hari</div>
+  <div class="time"><span id="h">0</span><br>Jam</div>
+  <div class="time"><span id="m">0</span><br>Menit</div>
+  <div class="time"><span id="s">0</span><br>Detik</div>
+</div>
+
+<!-- AYAT -->
+<div class="section">
+<p><b>QS. Ar-Rum: 21</b><br>
+“Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan agar kamu merasa tenteram, dan Dia menjadikan di antara kamu rasa kasih dan sayang.”</p>
+</div>
+
+<!-- MEMPELAI -->
+<div class="section">
+<h3>Diana Putri Utami</h3>
+<p>Anak ke-1 dari<br>
+Bapak Yadi Mulyadi<br>& Ibu Ai Sulastri</p>
+
+<h3>&</h3>
+
+<h3>Diki Pratama</h3>
+<p>Anak ke-2 dari<br>
+Bapak Supendi<br>& Ibu Nana Komalasari</p>
+</div>
+
+<!-- ACARA -->
+<div class="section">
+<h3>Akad & Resepsi</h3>
+<p>Minggu, 29 Maret 2026<br>
+Akad : 08.00 WIB – Selesai<br>
+Resepsi : 09.00 WIB – Selesai</p>
+</div>
+
+<!-- LOKASI -->
+<div class="section">
+<h3>Lokasi Acara</h3>
+<p>Kp. Cikareo RT 01/08<br>
+Kec. Parakansalak<br>
+Desa Parakan Salak<br>
+Kab. Sukabumi</p>
+<iframe src="https://www.google.com/maps?q=Kp.+Cikareo+Parakan+Salak+Sukabumi&output=embed"></iframe>
+</div>
+
+<!-- RSVP -->
+<div class="section">
+<h3>RSVP Kehadiran</h3>
+<input type="text" placeholder="Nama">
+<select>
+  <option>Hadir</option>
+  <option>Tidak Hadir</option>
+</select>
+<button class="send">Kirim</button>
+</div>
+
+<!-- UCAPAN -->
+<div class="section">
+<h3>Ucapan & Doa</h3>
+<textarea rows="4" placeholder="Tulis ucapan dan doa"></textarea>
+<button class="send">Kirim Ucapan</button>
+</div>
+
+<!-- HADIAH -->
+<div class="section">
+<h3>Kirim Hadiah</h3>
+<p><b>Transfer Bank</b><br>
+No. Rekening: 8410948118<br>
+a.n Diki pratama</p>
+
+<p><b>DANA</b><br>
+0857 8033 5928</p>
+a.n Diana Putri Utami</p>
+</div>
+
+<div class="section">
+<p style="font-style:italic">
+Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+</p>
+<p>Semoga Allah SWT membalas setiap doa dan kebaikan dengan keberkahan. Aamiin 🤍</p>
+
+</div>
+
+<script>
+function buka(){
+  document.getElementById("cover").style.display="none";
+  document.getElementById("musik").play();
+}
+
+const target = new Date("March 29, 2026 08:00:00").getTime();
+setInterval(()=>{
+  const now = new Date().getTime();
+  const s = target - now;
+  document.getElementById("d").innerHTML=Math.floor(s/(1000*60*60*24));
+  document.getElementById("h").innerHTML=Math.floor((s%(1000*60*60*24))/(1000*60*60));
+  document.getElementById("m").innerHTML=Math.floor((s%(1000*60*60))/(1000*60));
+  document.getElementById("s").innerHTML=Math.floor((s%(1000*60))/1000);
+},1000);
+</script>
+
+</body>
+</html>
